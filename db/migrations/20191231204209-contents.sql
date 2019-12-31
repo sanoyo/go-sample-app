@@ -1,0 +1,12 @@
+-- +migrate Up
+CREATE TABLE IF NOT EXISTS `contents` (
+  `content_id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `title` VARCHAR(255) NOT NULL,
+  `description` TEXT NOT NULL,
+  `content_type` INT unsigned NOT NULL,
+  `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- +migrate Down
+DROP TABLE IF EXISTS `contents`;

@@ -1,1 +1,7 @@
 .DS_Store
+
+# データベース接続
+dbconfig.yml
+
+# 設定ファイル
+config
